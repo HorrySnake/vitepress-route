@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Route — Bent Route</title>
+  <desc>A single white bent route symbol on a flat blue background. All artwork consists of vector paths.</desc>
+  <rect width="1024" height="1024" fill="#2864DA"/>
+  <path fill="#FFFFFF" d="M 288 224 H 672 C 707.35 224 736 252.65 736 288 V 336 C 736 352.97 729.26 369.25 717.25 381.25 L 442.5 656 H 736 V 784 H 352 C 316.65 784 288 755.35 288 720 V 672 C 288 655.03 294.74 638.75 306.75 626.75 L 581.5 352 H 288 Z"/>
+</svg>

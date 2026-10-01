@@ -1,81 +1,36 @@
-# VitePress Documentation Template
+# Route 静态网站
 
-A clean and customizable VitePress documentation template with a well-organized structure and modern design.
+无需安装依赖或构建。将本目录内容上传到静态网站托管服务，并将本目录设置为网站根目录即可。
 
-## Deploy
-Deploy with EdgeOne Pages.
+## 文件
 
-[![EdgeOne Pages deploy](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?template=vitepress-template)
+- index.html：极简 App 落地页
+- privacy.html：隐私说明
+- terms.html：用户协议
+- docs.html：文档概览
+- docs/：保留原文档路径，兼容旧链接
+- style.css：样式
+- language.js：中英切换
+- route-icon.png：正式产品图标
 
-## Features
+## 下载链接
 
-- 📚 Well-organized documentation structure
-- 🎨 Customized theme and styling
-- 📱 Responsive design
-- 🔍 Full-text search
-- 📦 Easy to deploy
-- 🚀 Fast and lightweight
+首页下载按钮目前禁用。上线后，在 index.html 中将 button.download-pending 替换为链接，例如：
 
-## Directory Structure
+<a class="download-pending" href="你的 App Store 完整链接"><span lang="zh">在 App Store 下载</span><span lang="en">Download on the App Store</span></a>
 
-```
-.
-├── .vitepress/          # VitePress configuration
-│   ├── config.mts       # Site configuration
-│   └── theme/           # Custom theme files
-│       └── style.css    # Custom styles
-├── pages/              # Documentation pages
-│   ├── index.md        # Home page
-│   ├── quick-start/    # Quick start guide
-│   ├── advanced/       # Advanced topics
-│   ├── deployment/     # Deployment guides
-│   └── examples/       # Examples
-├── dist/               # Build output directory
-├── package.json        # Project dependencies
-├── edgeone.json        # Project deployment parameters
-└── .gitignore         # Git ignore rules
-```
+并修改下方“开发中 · 即将上线”的文字。
 
-## Getting Started
+## 隐私与协议
 
-1. **Installation**
+文档目前为开发阶段草案，正式使用前请核实产品的数据处理行为，并补齐运营主体、联系方式和生效日期。
 
-```bash
-# Clone the repository
-git clone [your-repo-url]
+## 托管注意
 
-# Install dependencies
-npm install
-```
+站内链接从网站根目录开始（例如 /privacy.html），适合独立域名或根目录托管。如果部署在子目录下，需要调整链接和资源路径。
 
-2. **Development**
+该文件包不包含 Sites 配置、账户标识、Git 历史或访问凭据。网站没有依赖 Sites 的服务或 API。
 
-```bash
-# Start local development server
-npm run dev
-```
+## 本仓库部署
 
-3. **Build**
-
-```bash
-# Build for production
-npm run build
-```
-
-4. **Preview**
-
-```bash
-# Preview production build
-npm run preview
-```
-
-## Documentation Structure
-
-- **Quick Start**: Basic setup and configuration guide
-- **Advanced**: In-depth topics and customization
-- **Examples**: Markdown and API usage examples
-- **Deployment**: Deployment guides for various platforms
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+已替换原 VitePress 模板。`npm run build` 将上传的静态文件复制到 `dist/`，无需安装第三方依赖。保留 `edgeone.json` 的构建命令与输出目录，供已连接仓库的 EdgeOne Pages 自动部署。网站使用根目录链接，应部署到独立域名根目录。
