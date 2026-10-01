@@ -1,1 +1,22 @@
-(()=>{const b=document.getElementById('language');let lang='zh';try{lang=localStorage.getItem('route-language')||'zh'}catch{}function apply(){document.documentElement.dataset.language=lang;document.documentElement.lang=lang==='en'?'en':'zh-CN';b.textContent=lang==='en'?'中文':'EN';b.setAttribute('aria-label',lang==='en'?'切换到中文':'Switch to English')}apply();b.addEventListener('click',()=>{lang=lang==='en'?'zh':'en';try{localStorage.setItem('route-language',lang)}catch{}apply()})})();
+(() => {
+  const button = document.getElementById('language');
+  let language = 'zh';
+  try { if (localStorage.getItem('route-language') === 'en') language = 'en'; } catch {}
+  function apply() {
+    document.documentElement.dataset.language = language;
+    document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+    document.querySelectorAll('span[lang="zh"], span[lang="en"]').forEach(element => {
+      element.hidden = element.lang !== language;
+    });
+    if (button) {
+      button.textContent = language === 'en' ? '中文' : 'EN';
+      button.setAttribute('aria-label', language === 'en' ? '切换到中文' : 'Switch to English');
+    }
+  }
+  apply();
+  button?.addEventListener('click', () => {
+    language = language === 'en' ? 'zh' : 'en';
+    try { localStorage.setItem('route-language', language); } catch {}
+    apply();
+  });
+})();
