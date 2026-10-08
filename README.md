@@ -16,4 +16,4 @@ Settings → Pages → Source 选择 **GitHub Actions**。推送 main 后自动�
 
 首页 index.html，隐私说明 privacy.html，用户协议 terms.html，文档概览 docs.html。docs/ 保留兼容路径。language.js 管理中英文切换。
 
-下载按钮当前禁用，App 上线后填写实际 App Store 链接。法律文本仍为开发阶段草案，正式发布前需确认运营主体、联系方式及实际数据处理行为。
+下载按钮当前禁用，App 上线后填写实际 App Store 链接。法律文档版本 1.0，生效日期 2026-10-08；运营主体 CoherentStudio，联系邮箱 CoherentStudio@hotmail.com。文本根据当前 App 代码及功能编写，发布新功能时应同步核实并更新；正式法律适用性仍需结合服务地区审阅。
